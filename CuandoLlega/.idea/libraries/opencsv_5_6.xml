@@ -2,10 +2,13 @@
   <library name="opencsv-5.6">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/opencsv-5.6.jar!/" />
+      <root url="file://$PROJECT_DIR$/lib" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.12.0-bin.zip!/commons-lang3-3.12.0/apidocs" />
+      <root url="file://$PROJECT_DIR$/lib/commons-lang3-3.12.0/apidocs" />
     </JAVADOC>
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
   </library>
 </component>

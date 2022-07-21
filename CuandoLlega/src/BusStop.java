@@ -4,14 +4,22 @@ public class BusStop {
     private int busStopNumber;
     private String direction;
     //El diccionario percentBusStop indica el porcentaje del recorrido correspondiente a cada busNumber (ej.: 101 -> 60%, 201 -> 65%, etc.)
-    public Hashtable<Integer, Float> percentBusStop = new Hashtable<Integer, Float>();
+    public Hashtable<Integer, Integer> percentBusStop = new Hashtable<Integer, Integer>();
     public int[] possibleBusNumbers;
+
+    public BusStop(int busStopNumber, String direction, int[] possibleBusNumbers, Hashtable<Integer, Integer> possibleBusNumbersPercents) {
+        this.busStopNumber = busStopNumber;
+        this.direction = direction;
+        this.possibleBusNumbers = possibleBusNumbers;
+        this.percentBusStop = possibleBusNumbersPercents;
+    }
 
     public BusStop(int busStopNumber, String direction, int[] possibleBusNumbers) {
         this.busStopNumber = busStopNumber;
         this.direction = direction;
         this.possibleBusNumbers = possibleBusNumbers;
     }
+
 
     public BusStop(int BusStopNumber, int[] possibleBusNumbers) {
         this.busStopNumber = BusStopNumber;
@@ -31,10 +39,10 @@ public class BusStop {
     public void setDirection(String direction) {
         this.direction = direction;
     }
-    public Hashtable<Integer, Float> getPercentBusStop() {
+    public Hashtable<Integer, Integer> getPercentBusStop() {
         return percentBusStop;
     }
-    public void setPercentBusStop(Hashtable<Integer, Float> percentBusStop) {
+    public void setPercentBusStop(Hashtable<Integer, Integer> percentBusStop) {
         this.percentBusStop = percentBusStop;
     }
     public int[] getPossibleBusNumbers() {
