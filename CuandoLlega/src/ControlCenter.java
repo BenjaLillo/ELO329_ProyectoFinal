@@ -83,7 +83,7 @@ public class ControlCenter {
         for (int j = 0; j < busStockRead.length; j++) {
             for (int i = 0; i < busStockRead[j][1]; i++) {
                 busesArrayList.add(new Bus(0, busStockRead[j][0], "NA",busStockRead[j][2], 0, 0));
-                System.out.println(busesArrayList.get(i).toString());
+                //System.out.println(busesArrayList.get(i).toString());
             }
         }
         // Converts the arrayList to an array of buses called buses.
@@ -207,7 +207,7 @@ public class ControlCenter {
             }
 
             allBusStops[i] = new BusStop(ii,direction,possibleBusNumbers2);
-            System.out.println(allBusStops[i].toString());
+            //System.out.println(allBusStops[i].toString());
         }
         return allBusStops;
     }
@@ -398,14 +398,14 @@ public class ControlCenter {
                 }
             }
         }
-        System.out.println("diffMin" + diffMin);
-        System.out.println(minAverageSpeed);
-        System.out.println(minTotalDistance);
+        //System.out.println("diffMin" + diffMin);
+        //System.out.println(minAverageSpeed);
+        //System.out.println(minTotalDistance);
         float minPerc = (float) diffMin / 1000;
         //System.out.println(minPerc);
         float arriveTime = ((minTotalDistance * minPerc) / minAverageSpeed)*60;
 
-        System.out.println(arriveTime);
+        //System.out.println(arriveTime);
         return arriveTime;  //Tiempo de llegada del bus en minutos
     }
 }
